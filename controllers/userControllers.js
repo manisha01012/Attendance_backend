@@ -1,4 +1,4 @@
-const User = require('../model/Share_News(web)_db')
+const User = require('../model/Online_Attendance_Portal(web)_db')
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
@@ -63,9 +63,6 @@ catch(error){
 }
 
 
-catch(error){
-
-}
 
 // const User = require('../model/User')
 
