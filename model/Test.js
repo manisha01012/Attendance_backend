@@ -1,8 +1,8 @@
 const {Datatypes} = require(sequelize);
 
-const sequelize = require('../Online_Attendance_Portal/db');
+const sequelize = require('../database/db');
 
-const user = sequelize.define('Test',{
+const Test = sequelize.define('Tests',{
     userid: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -30,4 +30,4 @@ const user = sequelize.define('Test',{
 
 
 
-module.exports = TextDecoderStream;
+module.exports = Test;

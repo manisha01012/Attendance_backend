@@ -2,6 +2,7 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const sequelize = require('./database/db')
 const userRoute = require('./routes/userRoute');
 const sequelize = require('./OnlineAttendance_Portal/db')
 
@@ -9,7 +10,7 @@ const sequelize = require('./OnlineAttendance_Portal/db')
 const app = express();
 
 //Creating a port
-const PORT = process.env.PORT || 5432;
+const PORT = process.env.PORT || 5000;
 
 //Creating a middleware
 app.use(cors());
