@@ -1,6 +1,6 @@
 const {Datatypes} = require(sequelize);
 
-const sequelize = require('../database/db');
+const sequelize = require('../Online_Attendance_Portal/db');
 
 const user = sequelize.define('Test',{
     userid: {

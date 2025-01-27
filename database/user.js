@@ -1,5 +1,5 @@
 // Example (in app.js or a separate db.sync.js file):
-const sequelize = require('./database/db'); // Your Sequelize instance
+const sequelize = require('./Online_Attendance_Portal/db'); // Your Sequelize instance
 const User = require('./models/User'); // Import your models
 const Course = require('./models/Course');
 const Class = require('./models/Class');

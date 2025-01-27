@@ -3,13 +3,13 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const userRoute = require('./routes/userRoute');
-const sequelize = require('./database/db')
+const sequelize = require('./OnlineAttendance_Portal/db')
 
 //Creating a Server
 const app = express();
 
 //Creating a port
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5432;
 
 //Creating a middleware
 app.use(cors());
