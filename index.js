@@ -2,9 +2,9 @@
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
-const sequelize = require('./database/db')
-const userRoute = require('./routes/userRoute');
-const sequelize = require('./OnlineAttendance_Portal/db')
+const sequelize = require('./database/db');
+const userRoutes = require("./routes/userRoutes")
+// const sequelize = require('./OnlineAttendance_Portal/db')
 
 //Creating a Server
 const app = express();
@@ -23,7 +23,7 @@ app.get('/login',(req, res)=>{
 })
 
 
-app.use('/users', userRoute);
+app.use('/users', userRoutes);
 
 
 //Running on PORT

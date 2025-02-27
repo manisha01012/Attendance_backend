@@ -1,14 +1,15 @@
-const User = require('../model/Online_Attendance_Portal(web)_db')
+const User = require('../model/user')
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-const registerUser = async(req,res)=>{
+const registerUser = async (req,res)=>{
     const {username,password} = req.body;
     if(!username || !password){
         return res.status(400).json({
             error:"Insert the username and password"
         });
-        try{
+    }
+    try{
             const existingUser = await User.findOne({where:{username}})
             if (existingUser){
                 return res.status(400).json({
@@ -25,7 +26,7 @@ const registerUser = async(req,res)=>{
             console.log(error)
         }
     }
-}
+
 
 const loginUser = async(req,res)=>{
     const{username, password} = req.body
@@ -35,7 +36,7 @@ const loginUser = async(req,res)=>{
         });
     }
 
-}
+
 try{
     const user= await User.findOne({where: {username}})
     if(!user){
@@ -61,7 +62,7 @@ catch(error){
     res.status(500).json({error:"Something went wrong........"})
     console.log(error)
 }
-
+}
 
 
 // const User = require('../model/User')
@@ -124,5 +125,5 @@ catch(error){
 
 
 // module.exports = {createUser, getUser, deleteUser, updateUser}
-module.exports = {loginUser, register}
+module.exports = {loginUser, registerUser}
 
